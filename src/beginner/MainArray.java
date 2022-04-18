@@ -1,5 +1,6 @@
 package beginner;
 
+import beginner.array.ContainsDuplicate;
 import beginner.array.RemoveDuplicateFromSortedArray;
 import beginner.array.RotateArray;
 import common.MPrinter;
@@ -13,7 +14,7 @@ public class MainArray {
 //        System.out.println(test.removeDuplicates(nums));
 
         // 646
-        int[] nums = {1,2,3,4,5,6,7,8,9,10,11};
+        int[] nums = {1,2,3,4,5,6,7,8,9,10,10};
 //        MPrinter.print(nums);
 //
 //        RotateArray rotateArray = new RotateArray();
@@ -21,6 +22,12 @@ public class MainArray {
 //        rotateArray.rotateLessMemory(nums, 3);
 //        MPrinter.print(nums);
 
+        // 578
+//        ContainsDuplicate containsDuplicate = new ContainsDuplicate();
+//        boolean test = containsDuplicate.containsDuplicate(nums);
+//        System.out.println(test);
+
+        //
 
     }
 }
