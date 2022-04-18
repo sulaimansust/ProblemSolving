@@ -13,9 +13,14 @@ public class MainArray {
 //        System.out.println(test.removeDuplicates(nums));
 
         // 646
-        int[] nums = {1,2,2,3,4,5,5,6};
-        RotateArray rotateArray = new RotateArray();
-        rotateArray.rotate(nums, 3);
-        MPrinter.print(nums);
+        int[] nums = {1,2,3,4,5,6,7,8,9,10,11};
+//        MPrinter.print(nums);
+//
+//        RotateArray rotateArray = new RotateArray();
+////        rotateArray.rotate(nums, 3);
+//        rotateArray.rotateLessMemory(nums, 3);
+//        MPrinter.print(nums);
+
+
     }
 }
