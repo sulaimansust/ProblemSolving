@@ -3,6 +3,7 @@ package beginner;
 import beginner.array.ContainsDuplicate;
 import beginner.array.RemoveDuplicateFromSortedArray;
 import beginner.array.RotateArray;
+import beginner.array.SingleNumber;
 import common.MPrinter;
 
 public class MainArray {
@@ -27,7 +28,10 @@ public class MainArray {
 //        boolean test = containsDuplicate.containsDuplicate(nums);
 //        System.out.println(test);
 
-        //
-
+        // 549
+        int[] number = {1,2,1,2,3,3,4,5,6,5,6};
+        SingleNumber singleNumber = new SingleNumber();
+        int result = singleNumber.singleNumber(number);
+        System.out.println(result);
     }
 }
