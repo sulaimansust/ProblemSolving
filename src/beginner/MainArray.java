@@ -1,9 +1,6 @@
 package beginner;
 
-import beginner.array.ContainsDuplicate;
-import beginner.array.RemoveDuplicateFromSortedArray;
-import beginner.array.RotateArray;
-import beginner.array.SingleNumber;
+import beginner.array.*;
 import common.MPrinter;
 
 public class MainArray {
@@ -29,9 +26,14 @@ public class MainArray {
 //        System.out.println(test);
 
         // 549
-        int[] number = {1,2,1,2,3,3,4,5,6,5,6};
-        SingleNumber singleNumber = new SingleNumber();
-        int result = singleNumber.singleNumber(number);
-        System.out.println(result);
+        int[] number = {1,2,1,2,3,3,4,5,6,5,9};
+//        SingleNumber singleNumber = new SingleNumber();
+//        int result = singleNumber.singleNumber(number);
+//        System.out.println(result);
+
+        // 559
+        PlusOne plusOne = new PlusOne();
+        plusOne.plusOne(number);
+        MPrinter.print(number);
     }
 }
