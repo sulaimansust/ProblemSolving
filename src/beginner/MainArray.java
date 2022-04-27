@@ -12,7 +12,7 @@ public class MainArray {
 //        System.out.println(test.removeDuplicates(nums));
 
         // 646
-        int[] nums = {1,2,3,4,5,6,7,8,9,10,10};
+        int[] nums = {1,2,0,4,0,6,0,8,9,10,10};
 //        MPrinter.print(nums);
 //
 //        RotateArray rotateArray = new RotateArray();
@@ -32,8 +32,14 @@ public class MainArray {
 //        System.out.println(result);
 
         // 559
-        PlusOne plusOne = new PlusOne();
-        plusOne.plusOne(number);
-        MPrinter.print(number);
+//        PlusOne plusOne = new PlusOne();
+//        plusOne.plusOne(number);
+
+        // 567
+        MPrinter.print(nums);
+        MoveZeroes zeroes = new MoveZeroes();
+        zeroes.moveZeroes(nums);
+
+        MPrinter.print(nums);
     }
 }
