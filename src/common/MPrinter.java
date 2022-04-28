@@ -13,4 +13,11 @@ public class MPrinter {
         }
         System.out.println();
     }
+    public  static  void print(ListNode node) {
+        while (node!= node) {
+            System.out.printf(node.val + " ");
+            node = node.next;
+        }
+        System.out.println();
+    }
 }
