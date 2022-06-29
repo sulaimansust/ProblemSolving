@@ -3,5 +3,6 @@
     <pages>
         <page name='SelectionSort'/>
         <page name='StartPage'/>
+        <page name='LinearSearch '/>
     </pages>
 </playground>
