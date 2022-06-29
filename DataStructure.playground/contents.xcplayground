@@ -4,5 +4,6 @@
         <page name='SelectionSort'/>
         <page name='StartPage'/>
         <page name='LinearSearch '/>
+        <page name='BinarySearch'/>
     </pages>
 </playground>
