@@ -50,6 +50,10 @@ func binarySearchUsingRecursion(values: [Int], key: Int, low: Int, high: Int) ->
 
 let x = binarySearchUsingRecursion(values: values, key: 17, low: 0, high: values.count)
 
+/// Complexity is always  Log(n)
+///
+///
+
 //for i in 0..<19 {
 //    let x = binarySearchUsingRecursion(values: values, key: i, low: 0, high: values.count)
 //    print("count is: \(i) ")

@@ -6,6 +6,7 @@ import Foundation
 var values = [64,25,12,22,11]
 
 class SelectionSort {
+    /// Complexity is O(n2)
     func selectionSort( values: inout  [Int]) {
         print("Original values: \(values)")
         for i in 0..<values.count-1 {

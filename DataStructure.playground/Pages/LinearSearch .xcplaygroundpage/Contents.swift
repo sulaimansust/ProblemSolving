@@ -3,7 +3,8 @@
 import Foundation
 
 let values = [32,12,44,23,535,653,23,53,25]
-
+/// Complexity is O(n) always 
+///
 func linearSearch(values: [Int], key: Int) -> Int {
     for (index,item) in values.enumerated() {
         if item == key {
