@@ -36,14 +36,25 @@ class SinglyLinkedList{
         temp?.next = node
     }
     
-    func printList() {
-        var temp = head
+    func delete(value: Int) {
+        if head == nil {
+            return
+        }
+        if head?.value == value {
+            deleteHead()
+        }
+        var prev = head
+        var temp = head?.next
         while(temp != nil ) {
-            print(temp!.value)
+            if temp?.value == value {
+                prev?.next = temp?.next
+                temp = nil
+            }
+            prev = temp
             temp = temp?.next
         }
-        print("--------")
     }
+
     func deleteHead() {
         if head == nil {
             return
@@ -71,6 +82,14 @@ class SinglyLinkedList{
         temp = nil
         prev?.next = nil
     }
+    func printList() {
+        var temp = head
+        while(temp != nil ) {
+            print(temp!.value)
+            temp = temp?.next
+        }
+        print("--------")
+    }
 }
 var linkedList = SinglyLinkedList()
 linkedList.add(node: Node(value: 1))
@@ -81,7 +100,8 @@ linkedList.add(node: Node(value: 4))
 //linkedList.printList()
 //linkedList.deleteHead()
 linkedList.printList()
-linkedList.deleteTail()
+//linkedList.deleteTail()
+linkedList.delete(value: 1)
 linkedList.printList()
 
 //: [Next](@next)
