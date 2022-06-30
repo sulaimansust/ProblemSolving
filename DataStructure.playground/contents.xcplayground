@@ -10,5 +10,6 @@
         <page name='Stack'/>
         <page name='YelpTest'/>
         <page name='Queue'/>
+        <page name='SinglyLinkedList'/>
     </pages>
 </playground>
