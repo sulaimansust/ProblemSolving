@@ -3,5 +3,6 @@
     <pages>
         <page name='53. Maximum Subarray'/>
         <page name='217. Contains Duplicate '/>
+        <page name='1. Two Sum'/>
     </pages>
 </playground>
