@@ -3,5 +3,6 @@
     <pages>
         <page name='LongesCommonPrefix '/>
         <page name='RomanToInt'/>
+        <page name='Sqrt'/>
     </pages>
 </playground>
