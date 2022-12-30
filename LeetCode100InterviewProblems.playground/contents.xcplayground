@@ -4,5 +4,6 @@
         <page name='LongesCommonPrefix '/>
         <page name='RomanToInt'/>
         <page name='Sqrt'/>
+        <page name='ClimbStairs'/>
     </pages>
 </playground>
