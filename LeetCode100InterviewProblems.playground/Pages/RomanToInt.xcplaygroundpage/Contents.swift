@@ -1,6 +1,5 @@
 import UIKit
 
-var greeting = "Hello, playground"
 
 var numberMap = [
     "I" : 2,
