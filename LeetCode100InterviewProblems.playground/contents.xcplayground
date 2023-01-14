@@ -5,5 +5,6 @@
         <page name='RomanToInt'/>
         <page name='Sqrt'/>
         <page name='ClimbStairs'/>
+        <page name='35-Search-insert-position'/>
     </pages>
 </playground>
