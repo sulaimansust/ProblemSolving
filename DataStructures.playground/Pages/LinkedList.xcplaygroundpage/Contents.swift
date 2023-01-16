@@ -14,7 +14,7 @@ class Node{
 
 
 class SinglyLinkedList{
-    private var head: Node?
+    var head: Node?
     init(_ head: Node) {
         self.head = head
     }
@@ -73,8 +73,8 @@ class SinglyLinkedList{
     }
 
     
-    func printAll() {
-        var tempHead = head
+    static func printAll(head: Node) {
+        var tempHead: Node? = head
         while(tempHead != nil) {
             print(tempHead!.value)
             tempHead = tempHead?.next
@@ -136,26 +136,67 @@ class SinglyLinkedList{
     
 }
 
+
+func mergeTwoSortedLinkedList(head1: Node, head2: Node) -> Node{
+    
+    var dummyHead = Node(-1)
+    
+    var currentHead: Node? = dummyHead
+    
+    var tempHead1: Node? = head1
+    var tempHead2: Node? = head2
+    
+    while(tempHead1 != nil && tempHead2 != nil) {
+        if tempHead1!.value > tempHead2!.value {
+            currentHead?.next = tempHead2
+            tempHead2 = tempHead2?.next
+        } else {
+            currentHead?.next = tempHead1
+            tempHead1 = tempHead1?.next
+        }
+        currentHead = currentHead?.next
+    }
+    while tempHead1 != nil {
+        currentHead?.next = tempHead1
+        tempHead1 = tempHead1?.next
+    }
+    
+    while tempHead2 != nil {
+        currentHead?.next = tempHead2
+        tempHead2 = tempHead2?.next
+    }
+
+    
+    return dummyHead.next!
+    
+}
+
+
+
 //MARK: - SinglyLinked list
 
 var linkedList = SinglyLinkedList(Node(1))
+var linkedList2 = SinglyLinkedList(Node(2))
 
-linkedList.insert(2)
 linkedList.insert(3)
+linkedList2.insert(3)
 linkedList.insert(4)
-linkedList.insert(5)
+linkedList2.insert(5)
 linkedList.insert(6)
-//linkedList.insert(7)
-//linkedList.delete(7)
-linkedList.reverse()
-linkedList.printAll()
+linkedList.insert(7)
+linkedList2.insert(8)
+
+//linkedList.reverse()
+
+//SinglyLinkedList.printAll(head: linkedList.head!)
 linkedList.findMiddleNode()
 //print("Length: \(linkedList.length())")
 //print("------>")
 //linkedList.makeLoop(8)
 //linkedList.findLoop()
-
-
+var output = mergeTwoSortedLinkedList(head1: linkedList.head!, head2: linkedList2.head!)
+print("------>")
+SinglyLinkedList.printAll(head: output)
 
 
 //: [Next](@next)
