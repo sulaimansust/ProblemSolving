@@ -115,6 +115,23 @@ class SinglyLinkedList{
         }
         return false
     }
+    
+    func reverse() {
+        if head?.next == nil {
+            return
+        }
+        var prev: Node? = head
+        var next = head?.next
+        prev?.next = nil
+        
+        while( next != nil) {
+            let newNext = next?.next
+            next?.next = prev
+            prev = next
+            next = newNext
+        }
+        head = prev
+    }
 
     
 }
@@ -130,9 +147,10 @@ linkedList.insert(5)
 linkedList.insert(6)
 //linkedList.insert(7)
 //linkedList.delete(7)
+linkedList.reverse()
 linkedList.printAll()
 linkedList.findMiddleNode()
-print("Length: \(linkedList.length())")
+//print("Length: \(linkedList.length())")
 //print("------>")
 //linkedList.makeLoop(8)
 //linkedList.findLoop()
