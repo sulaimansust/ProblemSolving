@@ -12,39 +12,49 @@ public class ListNode {
 
 
 func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
-    var tempHead = head
-    var forwardHead : ListNode?
-
-    while(tempHead != nil) {
-
-        forwardHead = tempHead
-        for i in 1..<n {
-            print("executed i = \(i)")
-            forwardHead = forwardHead?.next
-        }
-        if let _ = forwardHead, forwardHead?.next == nil {
-            let nodeToDelete = tempHead?.next
-            print("executed \(nodeToDelete?.val ?? -1)")
-
-            tempHead?.next = nodeToDelete?.next
-            nodeToDelete?.next = nil
-            break;
-        }
-//        else {
-//            if tempHead === head {
-//                print("else")
-//
-//                tempHead = tempHead?.next
-//                printNode(node: tempHead)
-//
-//                return tempHead
-//            }
-//        }
+    var dummyHead: ListNode? = ListNode(0)
+    dummyHead?.next = head
+    
+    var tempHead = dummyHead?.next
+    var count = 0
+    
+    while(tempHead != nil ) {
+        tempHead = tempHead?.next
+        count = count+1
+    }
+    
+    print(count)
+    tempHead = dummyHead
+    for _ in 0 ..< count-n {
         tempHead = tempHead?.next
     }
+    
+    tempHead?.next = tempHead?.next?.next
+    
+    return dummyHead?.next
+    
+}
 
-    printNode(node: head)
-    return head
+func removeNthFromEndImproved(_ head: ListNode?, _ n: Int) -> ListNode? {
+    var dummyHead: ListNode? = ListNode(0)
+    dummyHead?.next = head
+    
+    var slow = dummyHead
+    var fast = dummyHead
+    
+    for _ in 0...n {
+        fast = fast?.next
+    }
+    
+    while(fast != nil) {
+        slow = slow?.next
+        fast = fast?.next
+    }
+    
+    slow?.next = slow?.next?.next
+    
+    return dummyHead?.next
+    
 }
 
 func printNode(node: ListNode? ) {
@@ -57,8 +67,9 @@ func printNode(node: ListNode? ) {
 }
 
 var head = ListNode(1)
-head.next = ListNode(2)
+//head.next = ListNode(2)
 //head.next?.next = ListNode(3)
 //head.next?.next?.next = ListNode(4)
-removeNthFromEnd(head, 2)
+var output = removeNthFromEndImproved(head, 1)
+printNode(node: output)
 //: [Next](@next)
