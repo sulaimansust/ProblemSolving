@@ -3,7 +3,8 @@
 import Foundation
 
 
-class Node {
+class Node{
+    
     var value: Int
     var next: Node?
     init(_ value: Int) {
@@ -24,6 +25,14 @@ class SinglyLinkedList{
             tempHead = tempHead?.next!
         }
         tempHead?.next = Node(value)
+    }
+    
+    func insert( _ node: Node ) {
+        var tempHead = head
+        while(tempHead?.next != nil) {
+            tempHead = tempHead?.next!
+        }
+        tempHead?.next = node
     }
     
     func delete(_ value: Int) {
@@ -83,8 +92,29 @@ class SinglyLinkedList{
         print("findMiddleNode: \(currentHead!.value)")
 
     }
+    
+    func makeLoop(_ value: Int) {
+        var node = Node(value)
+        self.insert(node)
+        node.next = head?.next
+    }
 
 
+    func findLoop() -> Bool{
+        var currentHead = head
+        var forwardHead = head
+        var count = 0
+        while(currentHead != nil ) {
+            print(count)
+            count = count+1
+            currentHead = currentHead?.next
+            forwardHead = forwardHead?.next?.next
+            if currentHead?.value == forwardHead?.value {
+                return true
+            }
+        }
+        return false
+    }
 
     
 }
@@ -98,11 +128,16 @@ linkedList.insert(3)
 linkedList.insert(4)
 linkedList.insert(5)
 linkedList.insert(6)
-linkedList.insert(7)
-linkedList.delete(7)
+//linkedList.insert(7)
+//linkedList.delete(7)
 linkedList.printAll()
 linkedList.findMiddleNode()
-print(linkedList.length())
+print("Length: \(linkedList.length())")
+//print("------>")
+//linkedList.makeLoop(8)
+//linkedList.findLoop()
+
+
 
 
 //: [Next](@next)
