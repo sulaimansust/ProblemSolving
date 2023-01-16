@@ -6,5 +6,6 @@
         <page name='Sqrt'/>
         <page name='ClimbStairs'/>
         <page name='35-Search-insert-position'/>
+        <page name='RemoveNthNode'/>
     </pages>
 </playground>
