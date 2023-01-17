@@ -4,5 +4,6 @@
         <page name='LinkedList'/>
         <page name='DoublyLinkedList'/>
         <page name='Stack'/>
+        <page name='StackLinkedList'/>
     </pages>
 </playground>
